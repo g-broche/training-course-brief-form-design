@@ -20,49 +20,53 @@
     <form method="post">
 
       <div id="group-first-name" class="form-group">
-        <label for="">First Name</label>
-        <input type="text" name="" id="" required>
-        <p id="error-first-name" class="error-message hidden"></p>
+        <label class="required-input" for="first-name-input">First Name</label>
+        <input type="text" name="firstName" id="first-name-input" required>
+        <p id="error-first-name" class="error-message hidden">error</p>
       </div>
 
       <div id="group-last-name" class="form-group">
-        <label for="">Last Name</label>
-        <input type="text" name="" id="" required>
-        <p id="error-last-name" class="error-message hidden"></p>
+        <label class="required-input" for="last-name-input">Last Name</label>
+        <input type="text" name="lastName" id="last-name-input" required>
+        <p id="error-last-name" class="error-message hidden">error</p>
       </div>
 
-      <div id="group-email" class="form-group">
-        <label for="">Email Address</label>
-        <input type="email" name="" id="" required>
-        <p id="error-email" class="error-message hidden"></p>
+      <div id="group-email" class="form-group full-row">
+        <label class="required-input" for="email-input">Email Address</label>
+        <input type="email" name="email" id="email-input" required>
+        <p id="error-email" class="error-message hidden">error</p>
       </div>
 
-      <div id="group-query" class="form-group">
-        <span>Query Type</span>
+      <div id="group-query" class="form-group full-row">
+        <span class="required-input">Query Type</span>
         <div class="form-subgroup">
-          <input type="radio" name="" id="" required>
-          <label for="">General Enquiry</label>
+          <div class="form-query-group makeshift-input half-width">
+            <input type="radio" name="queryType" id="query-general-input" value="general" required>
+            <label for="query-general-input">General Enquiry</label>
+          </div>
+          <div class="form-query-group makeshift-input half-width">
+            <input type="radio" name="queryType" id="query-support-input" value="support">
+            <label for="query-support-input">Support Request</label>
+          </div>
         </div>
-        <div class="form-subgroup">
-          <input type="radio" name="" id="">
-          <label for="">Support Request</label>
+        <p id="error-query-type" class="error-message hidden full-row">error</p>
+      </div>
+
+      <div id="group-message-input" class="form-group full-row">
+        <label class="required-input" for="message-input">Message</label>
+        <textarea name="message" id="message-input" required></textarea>
+        <p id="error-message-input" class="error-message hidden">error</p>
+      </div>
+
+      <div id="agreement" class="form-agreement full-row">
+        <div class="form-agreement-group">
+          <input type="checkbox" name="consent" id="consent-input" required>
+          <label class="required-input" for="consent-input">I consent to being contacted by the team</label>
         </div>
-        <p id="error-query-type" class="error-message hidden"></p>
+        <p id="error-first-name" class="error-message hidden">error</p>
       </div>
 
-      <div id="group-message-input" class="form-group">
-        <label for="">Message</label>
-        <textarea name="" id="" required></textarea>
-        <p id="error-message-input" class="error-message hidden"></p>
-      </div>
-
-      <div id="agreement" class="form-agreement">
-        <input type="email" name="" id="" required>
-        <label for="">I consent to being contacted by the team</label>
-        <p id="error-first-name" class="error-message hidden"></p>
-      </div>
-
-      <button type="submit">submit</button>
+      <button type="submit">Submit</button>
       
     </form>
   </main>
@@ -95,9 +99,9 @@
   Message Sent!
   Thanks for completing the form. We'll be in touch soon! -->
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
