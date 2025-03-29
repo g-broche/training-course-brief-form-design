@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Contact form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,10 +15,61 @@
   </style>
 </head>
 <body>
+  <main>
+    <h1>Contact Us</h1>
+    <form method="post">
 
-  Contact Us
+      <div id="group-first-name" class="form-group">
+        <label for="">First Name</label>
+        <input type="text" name="" id="" required>
+        <p id="error-first-name" class="error-message hidden"></p>
+      </div>
 
-  First Name
+      <div id="group-last-name" class="form-group">
+        <label for="">Last Name</label>
+        <input type="text" name="" id="" required>
+        <p id="error-last-name" class="error-message hidden"></p>
+      </div>
+
+      <div id="group-email" class="form-group">
+        <label for="">Email Address</label>
+        <input type="email" name="" id="" required>
+        <p id="error-email" class="error-message hidden"></p>
+      </div>
+
+      <div id="group-query" class="form-group">
+        <span>Query Type</span>
+        <div class="form-subgroup">
+          <input type="radio" name="" id="" required>
+          <label for="">General Enquiry</label>
+        </div>
+        <div class="form-subgroup">
+          <input type="radio" name="" id="">
+          <label for="">Support Request</label>
+        </div>
+        <p id="error-query-type" class="error-message hidden"></p>
+      </div>
+
+      <div id="group-message-input" class="form-group">
+        <label for="">Message</label>
+        <textarea name="" id="" required></textarea>
+        <p id="error-message-input" class="error-message hidden"></p>
+      </div>
+
+      <div id="agreement" class="form-agreement">
+        <input type="email" name="" id="" required>
+        <label for="">I consent to being contacted by the team</label>
+        <p id="error-first-name" class="error-message hidden"></p>
+      </div>
+
+      <button type="submit">submit</button>
+      
+    </form>
+  </main>
+
+  
+
+  <!-- First Name
   This field is required
 
   Last Name
@@ -42,7 +93,7 @@
   Submit
 
   Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+  Thanks for completing the form. We'll be in touch soon! -->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
