@@ -20,25 +20,25 @@
     <form method="post">
 
       <div id="group-first-name" class="form-group">
-        <label class="required-input" for="first-name-input">First Name</label>
+        <label for="first-name-input">First Name<i class="required-input"></i></label>
         <input type="text" name="firstName" id="first-name-input" required>
         <p id="error-first-name" class="error-message hidden">error</p>
       </div>
 
       <div id="group-last-name" class="form-group">
-        <label class="required-input" for="last-name-input">Last Name</label>
+        <label for="last-name-input">Last Name<i class="required-input"></i></label>
         <input type="text" name="lastName" id="last-name-input" required>
         <p id="error-last-name" class="error-message hidden">error</p>
       </div>
 
       <div id="group-email" class="form-group full-row">
-        <label class="required-input" for="email-input">Email Address</label>
+        <label for="email-input">Email Address<i class="required-input"></i></label>
         <input type="email" name="email" id="email-input" required>
         <p id="error-email" class="error-message hidden">error</p>
       </div>
 
       <div id="group-query" class="form-group full-row">
-        <span class="required-input">Query Type</span>
+        <span>Query Type<i class="required-input"></i></span>
         <div class="form-subgroup">
           <div class="form-query-group makeshift-input half-width">
             <input type="radio" name="queryType" id="query-general-input" value="general" required>
@@ -53,7 +53,7 @@
       </div>
 
       <div id="group-message-input" class="form-group full-row">
-        <label class="required-input" for="message-input">Message</label>
+        <label for="message-input">Message<i class="required-input"></i></label>
         <textarea name="message" id="message-input" required></textarea>
         <p id="error-message-input" class="error-message hidden">error</p>
       </div>
@@ -61,19 +61,20 @@
       <div id="agreement" class="form-agreement full-row">
         <div class="form-agreement-group">
           <input type="checkbox" name="consent" id="consent-input" required>
-          <label class="required-input" for="consent-input">I consent to being contacted by the team</label>
+          <label for="consent-input">I consent to being contacted by the team<i class="required-input"></i></label>
         </div>
         <p id="error-first-name" class="error-message hidden">error</p>
       </div>
 
-      <button type="submit">Submit</button>
+      <button class="full-row" type="submit">Submit</button>
       
     </form>
   </main>
+ 
+</body>
+</html>
 
-  
-
-  <!-- First Name
+ <!-- First Name
   This field is required
 
   Last Name
@@ -103,5 +104,3 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
-</body>
-</html>

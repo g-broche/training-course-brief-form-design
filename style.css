@@ -1,4 +1,4 @@
-:root{
+:root {
     --color-green-light: hsl(148, 38%, 91%);
     --color-green-medium: hsl(169, 82%, 27%);
     --color-red: hsl(0, 66%, 54%);
@@ -9,8 +9,10 @@
     --font-family: "karla";
 
     --body-padding-desktop: 5rem 0px;
+    --body-padding-mobile: 2rem 1rem;
     --main-padding-desktop: 2rem;
-    
+    --main-padding-mobile: 1.75rem;
+
     --field-padding-Y: .75rem;
     --field-padding-H: 1rem;
 
@@ -25,16 +27,16 @@
     font-weight: 400 700;
 }
 
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-size: var(--font-size-base);
     font-family: var(--font-family);
     color: var(--color-grey-darker);
 }
 
-body{
+body {
     padding: var(--body-padding-desktop);
     min-height: 100vh;
     width: 100vw;
@@ -45,123 +47,168 @@ body{
     align-items: center;
 }
 
-.error-message{
+.error-message {
     color: var(--color-red);
 }
 
-.error-input{
+.error-input {
     border-color: red !important;
 }
 
-.hidden{
-    display:none;
+.hidden {
+    display: none;
 }
 
-main{
+main {
     border-radius: 1rem;
     padding: var(--main-padding-desktop);
-    width:50%;
+    width: 50%;
     background-color: var(--color-white);
 }
 
-h1{
+h1 {
     font-size: calc(var(--font-size-base) * 2);
 }
 
-form{
+form {
     margin-top: 2rem;
-    width:100%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 1fr 1fr 1fr 2fr 2rem 3rem;
+    grid-template-rows: 1fr 1fr 1fr 2fr 2rem 3rem;
     column-gap: var(--half-row-gap);
     row-gap: 2rem;
     align-content: center;
 }
 
-.full-row{
+.full-row {
     grid-column: span 2;
 }
 
-.form-group{
+.form-group {
     display: flex;
     flex-direction: column;
     gap: .5rem;
 }
 
-.form-subgroup{
+.form-subgroup {
     display: flex;
     gap: var(--half-row-gap);
 }
 
-.form-subgroup label{
+.form-subgroup label {
     width: 100%;
 }
 
-.half-width{
+.half-width {
     width: 50%;
 }
 
-.required-input{
+.required-input {
     position: relative;
     width: fit-content;
 }
 
-.required-input::after{
+.required-input::after {
     position: absolute;
-    top: 0;
-    right: -1rem;
+    top: -.25rem;
+    right: -.75rem;
     content: "*";
-    font-size: calc( var(--font-size-base) * 1.25);
-    color:var(--color-green-medium)
+    font-size: calc(var(--font-size-base) * 1.25);
+    color: var(--color-green-medium)
 }
 
-input[type="text"], input[type="email"], textarea, .makeshift-input {
+input[type="text"],
+input[type="email"],
+textarea,
+.makeshift-input {
     padding: var(--field-padding-Y) var(--field-padding-H);
     border: 1px solid var(--color-grey-medium);
     border-radius: .5rem;
 }
 
-input[type="radio"], input[type="checkbox"]{
+input[type="radio"],
+input[type="checkbox"] {
     width: 1rem;
     height: 1rem;
 }
 
-textarea{
+textarea {
     resize: none;
     height: 100%;
 }
 
-.form-query-group, .form-agreement-group{
+.form-query-group,
+.form-agreement-group {
     display: flex;
     align-items: center;
     gap: var(--field-padding-H);
 }
 
-button[type="submit"]{
-    grid-column: span 2;
+button[type="submit"] {
     border: none;
     border-radius: .5rem;
     background-color: var(--color-green-medium);
     color: var(--color-white);
 }
 
-.form-query-group.checked{
+.form-query-group:has(input[type="radio"]:checked) {
     background-color: var(--color-green-light);
 }
 
-input:hover, label:hover, button[type="submit"]:hover{
+input:hover,
+label:hover,
+button[type="submit"]:hover {
     cursor: pointer;
 }
 
-input[type="text"]:hover, input[type="email"]:hover, textarea:hover{
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
     border-color: var(--color-green-medium) !important;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, textarea:focus{
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
     outline: 2px solid var(--color-green-medium);
 }
 
-button[type="submit"]:hover{
+button[type="submit"]:hover {
     background-color: var(--color-grey-darker);
+}
+
+@media only screen and (max-width:500px) {
+    body {
+        padding: var(--body-padding-mobile);
+    }
+
+    main {
+        border-radius: 1rem;
+        padding: var(--main-padding-mobile);
+        width: 100%;
+    }
+
+    form {
+        margin-top: 2rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 2fr 4fr 2rem 3rem;
+        column-gap: var(--half-row-gap);
+        row-gap: 2rem;
+        align-content: center;
+    }
+
+    .full-row {
+        grid-column: span 1;
+    }
+
+    .half-width {
+        width: 100%;
+    }
+
+    .form-subgroup {
+        flex-direction: column;
+    }
 }
