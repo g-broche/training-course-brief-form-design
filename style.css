@@ -9,6 +9,8 @@
     --font-family: "karla";
 
     --body-padding-desktop: 5rem 0px;
+    --body-padding-laptop: 3rem 0px;
+    --body-padding-tablet: 2rem 3rem;
     --body-padding-mobile: 2rem 1rem;
     --main-padding-desktop: 2rem;
     --main-padding-mobile: 1.75rem;
@@ -115,6 +117,7 @@ form {
     right: -.75rem;
     content: "*";
     font-size: calc(var(--font-size-base) * 1.25);
+    font-style: normal;
     color: var(--color-green-medium)
 }
 
@@ -178,13 +181,32 @@ button[type="submit"]:hover {
     background-color: var(--color-grey-darker);
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:1024px) {
+    body {
+        padding: var(--body-padding-laptop);
+    }
+
+    main {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    body {
+        padding: var(--body-padding-tablet);
+    }
+
+    main {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:600px) {
     body {
         padding: var(--body-padding-mobile);
     }
 
     main {
-        border-radius: 1rem;
         padding: var(--main-padding-mobile);
         width: 100%;
     }
